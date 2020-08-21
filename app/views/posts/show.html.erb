@@ -1,0 +1,8 @@
+<h1>詳細ページ</h1>
+<%= image_tag @post.image, class:"test" %>
+
+<%= link_to '削除', post_path(@post.id), method: :delete %>
+
+<%= link_to '編集', edit_post_path(@post.id), method: :get %>
+
+<%= link_to '戻る', root_path %>
