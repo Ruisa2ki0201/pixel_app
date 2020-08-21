@@ -1,0 +1,10 @@
+<%= form_with model: @post, local: true do |f| %>
+<%= f.file_field :image %>
+
+<%= f.text_field :name %>
+
+<%= f.text_field :text %>
+
+<%= f.submit "変更する", method: :update %>
+<%= link_to '戻る', root_path %>
+<% end %>
