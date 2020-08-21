@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :likes, dependent: :destroy
   has_many :liked_posts, through: :likes
+  has_many :comments, dependent: :destroy
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
   end
