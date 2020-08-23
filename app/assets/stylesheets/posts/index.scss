@@ -1,3 +1,63 @@
+
+.main {
+  width: 100%;
+}
+.title-image {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+}
+.image {
+  height: 35vh;
+  width: 30vw;
+  border: 4px ridge #ccc;
+  position: relative;
+  top: 50px;
+  left: 150px;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  background-color: yellow;
+}
+.image2 {
+  height: 35vh;
+  width: 30vw;
+  border: 4px ridge #ccc;
+  position: relative;
+  top: 150px;
+  right: 100px;
+  transform: rotate(5deg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  background-color: red;
+}
+.image3 {
+  height: 35vh;
+  width: 40vw;
+  position: relative;
+  top: 100px;
+  right: 70px;
+}
+.title-name {
+  font-size: 50px;
+  position: absolute;
+  top: 270px;
+  right: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .test {
   height: 35vh;
 }

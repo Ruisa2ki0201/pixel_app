@@ -5,15 +5,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #e6e6e6;
+  background-image: url(https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858__480.jpg);
+  background-size: contain;
 }
 header {
+  height: 8vh;
   width: 100%;
   padding: 20px 4% 20px;
   background-color: #fff;
-  position: fixed;
-  top: 0;
   display: flex;
   align-items: center;
 }
