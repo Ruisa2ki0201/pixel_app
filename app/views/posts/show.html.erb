@@ -14,7 +14,6 @@
 
 <div class="comment-box" data-post-id = <%= @post.id %>> 
   <%= form_with model: @comment, url:post_comments_path(@post.id) do |f| %>
-    <%= @post.user.nickname %>
     <%= f.text_field :content, class:"comment-text" %>
     <%= f.submit 'コメントする',class:"comment-btn" %>
   <% end %>
