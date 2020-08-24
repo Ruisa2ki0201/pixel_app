@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     if @comment.save
       CommentChannel.broadcast_to(@post, {content: @comment, user: current_user})
-      redirect_to post_path(@post.id)
     end
   end
 
