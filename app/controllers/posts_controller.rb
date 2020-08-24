@@ -18,8 +18,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
-    @comment = @post.comments.build
+    @comments = @post.comments.includes(:user)
+    @comment = Comment.new
     likes = Like.new
   end
 

@@ -1,12 +1,16 @@
-<h1>トップページ</h1>
-<div class="list">
-  <% if user_signed_in?%>
-    <%= link_to 'TOP', root_path, class:"top"%>
-    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class:"logout"%>
-  <% else %>
-    <%= link_to 'ログイン', new_user_session_path, class:"login" %>
-    <%= link_to '新規登録', new_user_registration_path, class:"sign_up" %>
-  <% end %>
+<%= render 'shared/header' %>
+
+<div class="main">
+  <div class="title-image">
+    <img src="https://cdn.pixabay.com/photo/2017/02/08/17/24/butterfly-2049567_1280.jpg" class="image">
+    <img src="https://cdn.pixabay.com/photo/2017/02/08/17/24/butterfly-2049567_1280.jpg" class="image2">
+    <img src="https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolour-4116932_1280.png" class="image3">
+    
+    <h2 class="title-name">
+      Pixel Exhibition
+    </h2>
+  </div>
+  
 </div>
 
 <% @posts.each do |post| %>
