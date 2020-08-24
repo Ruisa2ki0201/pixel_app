@@ -43,7 +43,28 @@
   right: 180px;
 }
 
+.btn-circle-border-double {
+  display: inline-block;
+  text-decoration: none;
+  color: #668ad8;
+  width: 120px;
+  height: 120px;
+  line-height: 115px;
+  border-radius: 50%;
+  border: double 4px #668ad8;
+  text-align: center;
+  overflow: hidden;
+  transition: .6s;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: white;
+}
 
+.btn-circle-border-double:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
 
 
 
