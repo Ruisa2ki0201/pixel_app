@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
   def index
     @posts =Post.all
   end
@@ -8,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
     if @post.save
       redirect_to root_path
     else
@@ -45,9 +46,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:name, :text, :image).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :text, :image, :genre_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end

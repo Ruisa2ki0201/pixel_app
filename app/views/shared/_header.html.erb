@@ -1,19 +1,24 @@
 <header>
   <h1>
-    <%=link_to 'Pixel Exhibition', root_path %>
+    <%=link_to "Pixel Exhibition","#", class:"header-title"%>
   </h1>
-  <nav class="pc_nav">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <form method="get" action="/posts/search" class="search_container">
+      <input type="keyword" size="25" placeholder="キーワード検索">
+      <input type="submit" value="&#xf002">
+    </form>
+  <nav class="pc-nav">
     <ul>
-      <%if user_signed_in? %>
-        <li><%=link_to 'TOP', root_path %></li>
-        <li><%=link_to 'カテゴリー', "#" %></li>
-        <li><%=link_to current_user.nickname, "nickname" %></li>
-        <li><%=link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <% if user_signed_in?%>
+      <li><%=link_to "アップロード", new_post_path, class:"upload" %></li>
+      <li><%=link_to "TOP", root_path, class:"list" %></li>
+      <li><%=link_to current_user.nickname, "nickname", class:"list" %></li>
+      <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"list" %></li>
       <% else %>
-        <li><%=link_to 'TOP', root_path %></li>
-        <li><%=link_to 'カテゴリー', "#" %></li>
-        <li><%=link_to 'ログイン', new_user_session_path %></li>
-        <li><%=link_to '新規登録', new_user_registration_path %></li>
+      <li><%=link_to "アップロード", new_user_registration_path, class:"upload" %></li>
+      <li><%=link_to "TOP", root_path, class:"list" %></li>
+      <li><%=link_to "ログイン", new_user_session_path, class:"list" %></li>
+      <li><%=link_to "新規登録", new_user_registration_path, class:"list" %></li>
       <% end %>
     </ul>
   </nav>

@@ -1,0 +1,24 @@
+<%= render 'shared/header' %>
+
+<div class="posts-content">
+  <% @posts.each do |post| %>
+  <div class="post-img-content">
+    <%= link_to post_path(post.id) do %>
+      <%= image_tag post.image, class:"post-img"%>
+    <% end %>
+    <div class="post-content">
+      <div class="post-name">
+        <%= post.name %>
+      </div>
+
+      <div class="post-like">
+        <%= post.likes.count %>
+      </div>
+
+      <div class="post-comment">
+        <%= post.comments.count %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
