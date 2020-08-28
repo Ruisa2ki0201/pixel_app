@@ -1,30 +1,78 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url(https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858__480.jpg);
-  background-size: contain;
-}
 header {
-  height: 8vh;
-  width: 100%;
   padding: 20px 4% 20px;
-  background-color: #fff;
+  width: 100%;
   display: flex;
   align-items: center;
+  background-color: white;
 }
-h1 {
-  margin: 0;padding: 0;
-  font-size: 20px;
+body{
+  background-color: #EEEEEE;
 }
 a {
   text-decoration: none;
-  color: #4b4b4b;
+}
+.header-title {
+  margin: 0; padding: 0;
+  font-size: 30px;
+  font-family: cursive;
+  color: black;
+}
+.upload {
+  font-family: serif;
+  padding: 7px 20px;
+  border-radius: 25px; /*角丸*/
+  color: #fff;
+  background-image: linear-gradient(45deg,#33FFFF 0%, #33FF66); /*線形グラデーションを指定*/
+  transition: .4s; /*時間を指定*/
+}
+.upload:hover {  /*カーソルを合わせた時に発動*/
+  background-image: linear-gradient(45deg, #33FFFF 0%, #00FF00);
+}
+.list {
+  color: black;
+  font-family: serif;
+}
+.search_container{
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #999;
+  display: block;
+  padding: 3px 10px;
+  margin-left: 50px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+}
+.search_container input[type="keyword"]{
+  border: none;  /* 周りの線を消す*/
+  height: 2.2em;
+}
+.search_container input[type="keyword"]:focus{
+  outline: 0;
+}
+.search_container input[type="submit"]{
+  cursor: pointer; /*マウスカーソルの種類*/
+  font-family: FontAwesome;
+  font-size: 1.3em;
+  border: none;
+  background: none; /*背景の色を消す*/
+  color: black;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  right: 0;
+  top: -10px;
+  outline: none;
+}
+nav {
+  margin: 0 0 0 auto;
 }
 ul {
+  list-style: none;
   margin: 0;
   display: flex;
 }
@@ -32,6 +80,4 @@ li {
   margin: 0 0 0 15px;
   font-size: 14px;
 }
-nav {
-  margin: 0 0 0 auto;
-}
+
