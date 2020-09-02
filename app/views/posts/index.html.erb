@@ -1,4 +1,36 @@
 <%=render 'shared/header'%>
 
 <div class="Main">
+  <div class="box">
+    <div class="image"></div>
+    <div class="image2"></div>
+
+    <h2 class="title-name">
+      Pixel Exhibition
+    </h2>
+
+    <p class="title-text">
+      Share your images with people around the world !
+    </p>
+  </div>
+
+  <div class="posts-content">
+    <% @posts.each do |post|%>
+    <div class="post-content">
+      <%=link_to post_path(post.id) do %>
+      <%= image_tag post.image,class:"post-image" if post.image.attached?%>
+      <% end %>
+
+      <div class="post-name">
+        <%= post.name %>
+
+        <%= post.likes.count %>
+
+        <%= post.comments.count %>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
+
+<%= render 'shared/footer'%>

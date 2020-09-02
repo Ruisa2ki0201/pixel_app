@@ -1,0 +1,47 @@
+.footer{
+  height: 200px;
+  width: 100%;
+  background-color: #333333;
+}
+.footer-title{
+  padding: 60px 0 10px 0;
+  font-size: 30px;
+  font-family: serif;
+  text-align: center;
+  color: whitesmoke;
+}
+.text{
+  color: whitesmoke;
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+}
+.sab-footer{
+  height: 200px;
+  width: 100%;
+  background-color: #333333;
+}
+.sab-footer-title{
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-family: serif;
+  text-align: center;
+  color: whitesmoke;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+}
+.login-btn{
+  margin-top: 40px;
+  font-size: 25px;
+  font-family: serif;
+  padding: 7px 20px;
+  border-radius: 25px; /*角丸*/
+  color: #fff;
+  background-image: linear-gradient(45deg,#33FFFF 0%, #33FF66); /*線形グラデーションを指定*/
+  transition: .4s; /*時間を指定*/
+}
+.login-btn:hover {  /*カーソルを合わせた時に発動*/
+  background-image: linear-gradient(45deg, #33FFFF 0%, #00FF00);
+}

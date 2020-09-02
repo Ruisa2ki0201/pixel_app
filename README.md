@@ -12,6 +12,7 @@
 - has_many :likes
 - has_many :liked_posts, through: :likes, source: :post
 - has_many :comments
+- has_many :sns_creadentials
 
 # postsテーブル
 
@@ -49,3 +50,14 @@
 ## Association
 - belongs_to : user
 - belongs_to : post
+
+## sns_creadentialsテーブル
+
+| Column               | Type      | Options                      |
+| -------------------- | --------- | -----------------------------|
+| provider             | string    | null:false                   |
+| uid                  | string    | null:false                   |
+| user_id              | references| null:false, foreign_key: true|
+
+## Association
+- belongs_to :user
