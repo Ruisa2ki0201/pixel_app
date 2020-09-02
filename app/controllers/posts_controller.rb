@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
   def index
-    @posts =Post.all
+    @posts =Post.includes(:user,:likes)
   end
 
   def new
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:name, :text, :image, :genre_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :text, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index
