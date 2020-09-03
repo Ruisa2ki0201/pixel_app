@@ -1,17 +1,14 @@
-<%=render 'shared/header'%>
+<%= render 'shared/header' %>
 
-<div class="Main">
-  <div class="box">
-    <div class="image"></div>
-    <div class="image2"></div>
+<div class="show-users-content">
+  <div class="show-user-content">
 
-    <h2 class="title-name">
-      Pixel Exhibition
+    <h2 class="show-user-name">
+      <%= current_user.nickname %>
     </h2>
 
-    <p class="title-text">
-      Share your images with people around the world !
-    </p>
+    <%=image_tag current_user.image.url, class:"show-user-icon" %>
+
   </div>
 
   <div class="posts-content">
@@ -33,5 +30,3 @@
     <% end %>
   </div>
 </div>
-
-<%= render 'shared/footer'%>
