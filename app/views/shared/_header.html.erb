@@ -11,8 +11,9 @@
     <ul>
       <% if user_signed_in?%>
       <li><%=link_to "アップロード", new_post_path, class:"upload" %></li>
-      <li><%=link_to "TOP", root_path, class:"list" %></li>
-      <li><%=link_to current_user.nickname, "nickname", class:"list" %></li>
+      <li><%=link_to "TOP", root_path, class:"list"%></li>
+      <li><%=image_tag current_user.image.url, class:"icon_image" %></li>
+      <li><%=link_to current_user.nickname, user_path(current_user.id), class:"list"%></li>
       <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"list" %></li>
       <% else %>
       <li><%=link_to "アップロード", new_user_registration_path, class:"upload" %></li>
