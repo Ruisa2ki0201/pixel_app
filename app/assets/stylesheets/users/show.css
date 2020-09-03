@@ -1,0 +1,30 @@
+.show-users-content{
+  width: 100%;
+}
+.show-user-content{
+  height: 400px;
+  padding: 50px;
+  background-image: linear-gradient(45deg,#FF9933 0%, #FF0033	);
+}
+.show-user-name{
+  font-size: 30px;
+  font-family: serif;
+  padding: 20px;
+  text-align: center;
+}
+.show-user-icon{
+  width: 200px;
+  height:200px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 100px;
+  object-fit: cover;
+}
+.show-user-post-content{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}

@@ -60,6 +60,8 @@ gem "omniauth-rails_csrf_protection"
 
 gem 'pry-rails'
 
+gem 'carrierwave'
+
 group :production do
   gem 'rails_12factor'
 end

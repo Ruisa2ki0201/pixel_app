@@ -6,6 +6,7 @@
 | email                | string | null:false  |
 | password             | string | null:false  |
 | password_confirmation| string | null:false  |
+| image                | stirng | null:false  |
 
 ## Association
 - has_many : posts
