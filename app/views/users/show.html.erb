@@ -9,6 +9,8 @@
 
     <%=image_tag current_user.image.url, class:"show-user-icon" %>
 
+    <%=link_to 'ユーザー詳細画面', edit_user_path(current_user.id) %>
+
   </div>
 
   <div class="posts-content">
