@@ -1,30 +1,41 @@
-.show-users-content{
-  width: 100%;
+.user-show-content{
+  height: 350px;
+  animation-name: fadein;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
 }
-.show-user-content{
-  height: 400px;
-  padding: 50px;
-  background-image: linear-gradient(45deg,#FF9933 0%, #FF0033	);
-}
-.show-user-name{
+.user-show-name{
   font-size: 30px;
   font-family: serif;
-  padding: 20px;
+  color: whitesmoke;
+  padding: 20px 0 0 0;
   text-align: center;
 }
-.show-user-icon{
+.user-show-create{
+  padding: 20px;
+  font-family: serif;
+  color: whitesmoke;
+  text-align: center;
+}
+.user-show-icon{
   width: 200px;
   height:200px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   display: block;
   border-radius: 100px;
   object-fit: cover;
 }
-.show-user-post-content{
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
+.user-edit-btn{
+  color: whitesmoke;
+  margin: 0 auto;
+  position: relative;
+  top: -300px;
+  left: 50px;
+  padding: 7px 20px;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+}
+.user-edit-btn:hover {
+  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
 }
