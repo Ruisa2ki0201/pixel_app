@@ -104,9 +104,174 @@ body{
 }
 .post-name{
   color: white;
+  padding: 10px 0 10px 0;
   font-family: serif;
 }
-
 .test{
   font-family: cursive;
 }
+
+// 未ログイン時
+.Main-sab{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation-name: fadein;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+.main-sab-box{
+  height: 500px;
+  width: 70%;
+  margin: 100px auto;
+}
+.main-sab-title{
+  color: whitesmoke;
+  font-size: 70px;
+  font-family: cursive;
+  text-align: center;
+}
+.sab-title{
+  padding: 10px;
+  font-size: 30px;
+  font-family: cursive;
+  text-align: center;
+  color: whitesmoke;
+}
+.sab-text{
+  padding: 20px;
+  font-family: serif;
+  font-size: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+// 未ログイン時
+
+
+// 新規登録ボタン
+.sab-content {
+  padding: 20px;
+  text-align: center;
+}
+.new-sab-btn{
+  font-family: serif;
+  padding: 7px 20px;
+  border-radius: 25px;
+  color: #fff;
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  transition: .4s; 
+}
+.new-sab-btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+}
+// 新規登録ボタン
+
+
+// ログインボタン
+.sab-content2{
+  padding: 10px;
+  text-align: center;
+}
+.login-btn{
+  font-family: serif;
+  padding: 7px 20px;
+  border-radius: 25px;
+  color: #fff;
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  transition: .4s;
+}
+.login-btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+}
+// ログインボタン
+
+
+// プライバシーと利用規約
+.privacy{
+  padding: 50px 0 10px 0;
+  text-align: center;
+}
+.privacy-link{
+  font-family: serif;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+.privacy-link:before, .privacy-link:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: whitesmoke;
+}
+.privacy-link:before {
+  left:0;
+}
+.privacy-link:after {
+  right: 0;
+}
+// プライバシーと利用規約
+
+
+// お問い合わせボタン
+.contact-us {
+  padding: 20px;
+  text-align: center;
+}
+.contact-link{
+  font-family: serif;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+.contact-link:before, .contact-link:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: whitesmoke;
+}
+.contact-link:before {
+  left:0;
+}
+.contact-link:after {
+  right: 0;
+}
+// お問い合わせボタン
+
+
+// Pixelボタン
+.pixel{
+  padding: 10px;
+  text-align: center;
+}
+.pixel-link{
+  font-size: 30px;
+  font-family: serif;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+.pixel-link:before, .pixel-link:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: whitesmoke;
+}
+.pixel-link:before {
+  left:0;
+}
+.pixel-link:after {
+  right: 0;
+}
+
