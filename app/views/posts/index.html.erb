@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+
 <%=render 'shared/header'%>
 
 <div class="Main">
@@ -50,3 +52,52 @@
     <% end %>
   </div>
 </div>
+
+<% else %>
+
+<div class="Main-sab">
+  <div class="main-sab-box">
+    <h2 class="main-sab-title">
+      Pixel Exhibition
+    </h2>
+
+    <p class="sab-title">
+       Welcome to Pixel Exhibition
+    </p>
+
+    <p class="sab-text">
+      <span class="test">Pixel Exhibition</span>は無料でお気に入りの画像を投稿できるアプリです。<br>
+      まずはサインアップを行いましょう！
+    </p>
+    
+    <div class="sab-content">
+      <%=link_to 'サインアップは無料です！',new_user_registration_path, class:"new-sab-btn" %>
+    </div>
+
+    <div class="sab-content2">
+      <%=link_to 'ログイン',new_user_registration_path, class:"login-btn" %>
+    </div>
+
+    <div class="privacy">
+      <%=link_to 'プライバシーポリシーと利用規約',"#",class:"privacy-link"%>
+    </div>
+
+    <div class="contact-us">
+      <%=link_to 'お問い合わせ',"#",class:"contact-link"%>
+    </div>
+
+    <div class="pixel">
+      <%=link_to 'Pixel',"#",class:"pixel-link"%>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<% end %>
