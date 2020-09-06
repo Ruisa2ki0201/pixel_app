@@ -1,8 +1,7 @@
 window.addEventListener('load', function(){
   const Lists = document.querySelectorAll(".list")
-  const box = document.querySelector(".box")
-  const Image = document.querySelector(".image")
-  const Image2 = document.querySelector(".image2")
+  const Image = document.querySelector(".main-image")
+  const Image2 = document.querySelector(".main-image2")
   console.log(Image2)
 
   Lists.forEach(function(list){
@@ -12,13 +11,6 @@ window.addEventListener('load', function(){
     list.addEventListener('mouseout', function(){
       list.removeAttribute("style", "color: #33FF66")
     })
-  })
-
-  box.addEventListener('mouseover', function(){
-    box.setAttribute("style", "background-image: linear-gradient(45deg,#FF9966 0%, #FF3399);")
-  })
-  box.addEventListener('mouseout', function(){
-    box.removeAttribute("style", "background-image: linear-gradient(45deg,#FF9966 0%, #FF3399);")
   })
 
   Image.addEventListener('click', function(){

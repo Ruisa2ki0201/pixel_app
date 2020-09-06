@@ -6,10 +6,7 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: white;
-}
-body{
-  background-color: #EEEEEE;
+  background-color: whitesmoke;
 }
 a {
   text-decoration: none;
@@ -25,11 +22,11 @@ a {
   padding: 7px 20px;
   border-radius: 25px; /*角丸*/
   color: #fff;
-  background-image: linear-gradient(45deg,#33FFFF 0%, #33FF66); /*線形グラデーションを指定*/
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	); /*線形グラデーションを指定*/
   transition: .4s; /*時間を指定*/
 }
 .upload:hover {  /*カーソルを合わせた時に発動*/
-  background-image: linear-gradient(45deg, #33FFFF 0%, #00FF00);
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
 }
 .list {
   color: black;
@@ -46,13 +43,16 @@ a {
   height: 2.3em;
   width: 260px;
   overflow: hidden;
+  background-color: whitesmoke;
 }
 .search_container input[type="keyword"]{
   border: none;  /* 周りの線を消す*/
   height: 2.2em;
+  background-color: whitesmoke;
 }
 .search_container input[type="keyword"]:focus{
   outline: 0;
+  color: black;
 }
 .search_container input[type="submit"]{
   cursor: pointer; /*マウスカーソルの種類*/

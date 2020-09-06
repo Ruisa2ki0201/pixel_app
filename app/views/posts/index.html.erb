@@ -1,37 +1,52 @@
 <%=render 'shared/header'%>
 
 <div class="Main">
-  <div class="box">
-    <div class="image"></div>
-    <div class="image2"></div>
+  <div class="main-box">
+    <div class="main-image"></div>
+    <div class="main-image2"></div>
 
-    <h2 class="title-name">
+    <h2 class="main-title">
       Pixel Exhibition
     </h2>
 
-    <p class="title-text">
-      Share your images with people around the world !
+    <p class="main-text">
+      Share your images with people around the world
     </p>
   </div>
 
+  <h2 class="about-title">
+    <span class="test">Pixel Exhibition</span>について
+  </h2>
+
+  <div class="about">
+    <p class="about-text">
+      <span class="test">Pixel Exhibition</span>では自分のお気に入りの画像を投稿する事ができるアプリであり<br>
+      <span class="test">Pixel Exhibition</span>を利用すれば世界中の人々と画像を共有できます。<br>
+      また、著作者に対する許可やクレジットは不要で安全に利用できます。
+    </p>
+  </div>
+
+  <h2 class="post-title">
+    画像投稿一覧
+  </h2>
+  
   <div class="posts-content">
     <% @posts.each do |post|%>
     <div class="post-content">
+
       <%=link_to post_path(post.id) do %>
-      <%= image_tag post.image,class:"post-image" if post.image.attached?%>
+        <%= image_tag post.image,class:"post-image" if post.image.attached?%>
       <% end %>
 
       <div class="post-name">
-
         <%= post.name %>
+        
+        いいね：<%= post.likes.count %>
 
-        <%= post.likes.count %>
-
-        <%= post.comments.count %>
+        コメント数：<%= post.comments.count %>
       </div>
+
     </div>
     <% end %>
   </div>
 </div>
-
-<%= render 'shared/footer'%>

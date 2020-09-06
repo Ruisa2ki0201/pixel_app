@@ -1,50 +1,71 @@
 <%= render 'shared/header'%>
 
-<div class="show-contents">
-  <div class="show-content">
-    <%=image_tag @post.image, class:"show-image"%>
-    <h3 class="show-posts">
-      いいね件数：<%= @post.likes.count %>
-      <% if user_signed_in? &&current_user.already_liked?(@post) %>
-        <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete, class:"show-likes-btn" %>
-      <% else %>
-        <%= button_to 'いいね', post_likes_path(@post), class:"show-likes-btn" %>
-      <% end %>
-      &nbsp;
-      <%= @post.name %>
-      &nbsp;
-      <% if user_signed_in? && current_user.id == @post.user_id %> 
-        <%= link_to '削除', post_path(@post.id), method: :delete, class:"show-btn" %>
-        &nbsp;
-        <%= link_to '編集', edit_post_path(@post.id), method: :get, class:"show-btn" %>
-      <% end %>
-    </h3>
-    <div class="show-text">
-      <%=@post.text%>
-    </div>
-  </div>
+<div class="show-box">
+  <div class="show-contents">
+    <div class="show-content">
+      <%=image_tag @post.image, class:"show-image"%>
+      
+      <div class="show-posts">
 
-  <div class="show-comment">
-    <div class="comment" id="comments">
-    <% @comments.reverse_each do |comment| %>
-      <p class="text-box">
-        <%= comment.user.nickname%>:
-        <%= comment.content %>
-        &nbsp;
-        <% if user_signed_in? && current_user.id == comment.user_id %> 
-          <%= link_to '削除', comment_path(comment.id), method: :delete %>
+        いいね件数：<%= @post.likes.count %>
+
+        <% if user_signed_in? &&current_user.already_liked?(@post) %>
+          <%= button_to 'いいねを取り消す', post_like_path(@post), method: :delete, class:"show-likes-btn" %>
+        <% else %>
+          <%= button_to 'いいね', post_likes_path(@post), class:"show-likes-btn" %>
         <% end %>
-      </p>
-    <% end %>
+
+      </div>
+
+      <div class="show-name">
+        <%= @post.name %>
+      </div>
+
+      <div class="show-created_at">
+        投稿日:<%= @post.created_at.to_s(:datetime_jp) %>より
+      </div>
+
+      <div class="show-text">
+        <%= @post.text %>
+      </div>
     </div>
-    <div class="comment-box" data-post-id = <%= @post.id %>> 
-    <%= form_with model: @comment, url:post_comments_path(@post.id) do |f| %>
-      <%= f.text_field :content, class:"comment-text" %>
-      <%= f.submit 'コメントする',class:"comment-btn" %>
-    <% end %>
+
+    <div class="show-content2">
+      <div class="show-user-content">
+        <%=image_tag @post.user.image.url, class:"show-icon"%>
+
+        <div class="show-nickname">
+          <%=@post.user.nickname %>
+        </div>
+      </div>
+
+      <div class="show-user-created_at">
+        メンバー歴:<%= @post.user.created_at.to_s(:datetime_jp)%>より
+      </div>
+      
+      <div class="show-comment">
+        <div class="comment" id="comments">
+          <% @comments.reverse_each do |comment| %>
+          <p class="text-box">
+            <%= comment.user.nickname%>:
+            <%= comment.content %>
+            &nbsp;
+            <% if user_signed_in? && current_user.id == comment.user_id %> 
+              <%= link_to '削除', comment_path(comment.id), method: :delete %>
+            <% end %>
+          </p>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="comment-box" data-post-id = <%= @post.id %>> 
+        <%= form_with model: @comment, url:post_comments_path(@post.id) do |f| %>
+          <%= f.text_field :content, placeholder:"コメント",class:"comment-text" %>
+          <%= f.submit 'コメントする',class:"comment-btn" %>
+        <% end %>
+      </div>
+
+
     </div>
   </div>
-</div>
-
-<div class="show-footer">
 </div>

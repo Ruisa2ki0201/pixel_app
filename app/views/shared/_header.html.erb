@@ -1,6 +1,6 @@
 <header>
   <h1>
-    <%=link_to "Pixel Exhibition","#", class:"header-title"%>
+    <%=link_to "Pixel Exhibition",root_path, class:"header-title"%>
   </h1>
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <form method="get" action="/posts/search" class="search_container">
@@ -11,13 +11,11 @@
     <ul>
       <% if user_signed_in?%>
       <li><%=link_to "アップロード", new_post_path, class:"upload" %></li>
-      <li><%=link_to "TOP", root_path, class:"list"%></li>
       <li><%=image_tag current_user.image.url, class:"icon_image" %></li>
       <li><%=link_to current_user.nickname, user_path(current_user.id), class:"list"%></li>
       <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"list" %></li>
       <% else %>
       <li><%=link_to "アップロード", new_user_registration_path, class:"upload" %></li>
-      <li><%=link_to "TOP", root_path, class:"list" %></li>
       <li><%=link_to "ログイン", new_user_session_path, class:"list" %></li>
       <li><%=link_to "新規登録", new_user_registration_path, class:"list" %></li>
       <% end %>

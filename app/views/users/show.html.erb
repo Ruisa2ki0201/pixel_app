@@ -1,33 +1,40 @@
 <%= render 'shared/header' %>
 
-<div class="show-users-content">
-  <div class="show-user-content">
+<div class="user-show-content">
 
-    <h2 class="show-user-name">
-      <%= current_user.nickname %>
-    </h2>
+  <h2 class="user-show-name">
+    <%= current_user.nickname %>
+  </h2>
 
-    <%=image_tag current_user.image.url, class:"show-user-icon" %>
+  <p class="user-show-create">
+    メンバー歴:<%= current_user.created_at.to_s(:datetime_jp)%>より
+  </p>
 
-    <%=link_to 'ユーザー詳細画面', edit_user_path(current_user.id) %>
+  <%=image_tag current_user.image.url, class:"user-show-icon" %>
 
-  </div>
+  
+  <%=link_to 'プロフィールを編集する', edit_user_path(current_user.id), class:"user-edit-btn" %>
 
+  <h2 class="post-title">
+    画像投稿一覧
+  </h2>
+  
   <div class="posts-content">
     <% @posts.each do |post|%>
     <div class="post-content">
+
       <%=link_to post_path(post.id) do %>
-      <%= image_tag post.image,class:"post-image" if post.image.attached?%>
+        <%= image_tag post.image,class:"post-image" if post.image.attached?%>
       <% end %>
 
       <div class="post-name">
-
         <%= post.name %>
 
-        <%= post.likes.count %>
+        いいね：<%= post.likes.count %>
 
-        <%= post.comments.count %>
+        コメント数：<%= post.comments.count %>
       </div>
+
     </div>
     <% end %>
   </div>
