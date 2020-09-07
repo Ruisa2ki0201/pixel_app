@@ -1,0 +1,56 @@
+.privacy-box{
+  width: 100%;
+  padding: 50px;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+.privacy-title{
+  font-size: 70px;
+  font-family: cursive;
+  text-align: center;
+  color: whitesmoke;
+}
+.Terms-of-service{
+  padding: 20px;
+  font-size: 30px;
+  font-family: serif;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.privacy-content{
+  text-align: center;
+}
+.privacy-text{
+  font-family: serif;
+  color: whitesmoke;
+}
+.privacy-1{
+  padding: 30px;
+  font-size: 30px;
+  font-family: serif;
+  color: whitesmoke;
+  text-align: center;
+}
+.privacy-text2{
+  color: whitesmoke;
+  font-family: serif;
+  text-align: center;
+  padding: 20px;
+}
+.privacy-btn{
+  text-align: center;
+  padding: 50px;
+}
+.root_btn{
+  font-family: serif;
+  padding: 7px 20px;
+  border-radius: 25px;
+  color: #fff;
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  transition: .4s;
+}
+.root_btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+}

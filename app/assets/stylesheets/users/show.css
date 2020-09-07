@@ -1,5 +1,5 @@
 .user-show-content{
-  height: 350px;
+  width: 100%;
   animation-name: fadein;
   animation-duration: 7s;
   animation-iteration-count: 1;
@@ -12,7 +12,7 @@
   text-align: center;
 }
 .user-show-create{
-  padding: 20px;
+  padding: 20px 0 0 0;
   font-family: serif;
   color: whitesmoke;
   text-align: center;
@@ -20,12 +20,13 @@
 .user-show-icon{
   width: 200px;
   height:200px;
-  margin: 0 auto 20px;
+  margin: 10px auto 20px;
   display: block;
   border-radius: 100px;
   object-fit: cover;
 }
 .user-edit-btn{
+  font-family: serif;
   color: whitesmoke;
   margin: 0 auto;
   position: relative;
@@ -34,8 +35,29 @@
   padding: 7px 20px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
 }
 .user-edit-btn:hover {
-  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
 }
+.posts-count{
+  justify-content: center;
+  font-family: serif;
+  display: flex;
+  color: whitesmoke;
+}
+/* .user-dm-btn{
+  font-family: serif;
+  color: whitesmoke;
+  margin: 0 auto;
+  position: relative;
+  top: -250px;
+  right: 160px;
+  padding: 7px 20px;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+}
+.user-dm-btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+} */

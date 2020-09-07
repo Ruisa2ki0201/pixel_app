@@ -62,6 +62,8 @@ gem 'pry-rails'
 
 gem 'carrierwave'
 
+gem 'high_voltage'
+
 group :production do
   gem 'rails_12factor'
 end

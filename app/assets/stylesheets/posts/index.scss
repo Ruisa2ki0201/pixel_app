@@ -217,32 +217,32 @@ body{
 
 
 // お問い合わせボタン
-.contact-us {
-  padding: 20px;
-  text-align: center;
-}
-.contact-link{
-  font-family: serif;
-  color: whitesmoke;
-  position: relative;
-  display: inline-block;
-  padding: 0 55px;
-}
-.contact-link:before, .contact-link:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: whitesmoke;
-}
-.contact-link:before {
-  left:0;
-}
-.contact-link:after {
-  right: 0;
-}
+// .contact-us {
+//   padding: 20px;
+//   text-align: center;
+// }
+// .contact-link{
+//   font-family: serif;
+//   color: whitesmoke;
+//   position: relative;
+//   display: inline-block;
+//   padding: 0 55px;
+// }
+// .contact-link:before, .contact-link:after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   display: inline-block;
+//   width: 45px;
+//   height: 1px;
+//   background-color: whitesmoke;
+// }
+// .contact-link:before {
+//   left:0;
+// }
+// .contact-link:after {
+//   right: 0;
+// }
 // お問い合わせボタン
 
 
@@ -274,4 +274,3 @@ body{
 .pixel-link:after {
   right: 0;
 }
-
