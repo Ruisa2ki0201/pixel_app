@@ -1,0 +1,43 @@
+.pixel-box{
+  width: 100%;
+  text-align: center;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+.pixel-title{
+  font-size: 50px;
+  font-family: serif;
+  padding: 30px 55px;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+}
+.pixel-title:before, .pixel-title:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: whitesmoke;
+}
+.pixel-title:before {
+  left:0;
+}
+.pixel-title:after {
+  right: 0;
+}
+.pixel-text{
+  font-family: serif;
+  font-size: 20px;
+  color: whitesmoke;
+}
+.pixel_text{
+  font-family: cursive;
+}
+.pixel-name{
+  font-family: serif;
+  padding: 30px;
+  color: whitesmoke;
+}
