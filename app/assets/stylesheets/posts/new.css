@@ -1,46 +1,75 @@
 .new-main{
   width: 100%;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-}
-.new-box{
-  height: 400px;
-  width: 500px;
-  background: rgba(255, 255, 255, 50%);
   animation-name: fadein;
-  animation-duration: 7s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
-  border-top: solid 2px whitesmoke;
-  border-bottom: solid 2px whitesmoke;
 }
-.new-title{
-  padding: 30px;
-  font-size: 50px;
-  font-family: cursive;
-  text-align: center;
-}
-
-#post_image{
-  display: block;
+.new-main-content{
+  height: 600px;
+  width: 50%;
   margin: 0 auto;
 }
-
-
-#post_name{
-  width: 400px;
-  padding: 15px;
-  border: 1px solid white;
-  display: block;
-  margin: 20px auto;
+.new-title{
+  padding: 20px 0 10px 0;
+  font-size: 70px;
+  font-family: cursive;
+  text-align: center;
+  color: whitesmoke;
+}
+.new-text-content{
+  text-align: center;
+}
+.new-text{
+  font-size: 20px;
+  font-family: cursive;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+.new-text:before, .new-text:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: whitesmoke;
+}
+.new-text:before {
+  left:0;
+}
+.new-text:after {
+  right: 0;
 }
 
+
+
+/* form */
+#post_image{
+  display: block;
+  margin: 30px auto 0;
+  color: whitesmoke;
+  font-family: serif;
+}
+#post_name{
+  width: 400px;
+  padding: 15px 15px 10px 15px;
+  border: none;
+  outline: none;
+  border: 1px solid whitesmoke;
+  display: block;
+  margin: 30px auto 0;
+}
 #post_text{
+  height: 100px;
   width: 400px;
   padding: 15px;
-  border: 1px solid white;
+  margin: 30px auto 0;
+  border: 1px solid whitesmoke;
+  outline: none;
   display: block;
-  margin: 10px auto;
 }
 .post-btn{
   display: block;
@@ -49,12 +78,22 @@
   padding: 7px 100px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
 }
 .post-btn:hover {
-  background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+}
+.new-post-btn{
+  text-align: center;
 }
 .new-btn{
-  display: block;
-  margin: o auto;
+  color: whitesmoke;
+  padding: 7px 30px;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
 }
+.new-btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+}
+/* form */

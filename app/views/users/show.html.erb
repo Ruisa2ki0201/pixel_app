@@ -9,11 +9,23 @@
   <p class="user-show-create">
     メンバー歴:<%= current_user.created_at.to_s(:datetime_jp)%>より
   </p>
+   
 
   <%=image_tag current_user.image.url, class:"user-show-icon" %>
 
-  
-  <%=link_to 'プロフィールを編集する', edit_user_path(current_user.id), class:"user-edit-btn" %>
+  <div class="posts-count">
+    投稿：<%= @posts.count %>
+    &nbsp;
+    いいね：<%= current_user.likes.count %>
+    &nbsp;
+    コメント：<%= current_user.comments.count%>
+  </div>
+
+  <% if user_signed_in? && current_user.id %>
+    <%=link_to 'プロフィールを編集する', edit_user_path(current_user.id), class:"user-edit-btn" %>
+  <% end %>
+
+  <%# <%=link_to 'ダイレクトメッセージ', "#", class:"user-dm-btn" %> 
 
   <h2 class="post-title">
     画像投稿一覧
