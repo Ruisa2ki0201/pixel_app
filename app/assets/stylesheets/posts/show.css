@@ -20,6 +20,7 @@
 }
 .show-image{
   height: 300px;
+  border: 5px ridge whitesmoke;
 }
 .show-posts{
   font-family: serif;
@@ -35,7 +36,10 @@
   border: none;
   outline: 0;
   display: inline-block;
-  background-image: linear-gradient(45deg, #FF9999 0%, #FF3399);
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+}
+.show-likes-btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
 }
 .show-name{
   padding-top: 20px;
@@ -87,14 +91,13 @@
   height: 250px;
   width: 100%;
   margin-top: 20px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  padding: 20px;
   overflow-x: scroll;
   background-color: whitesmoke;
 }
 
 
-
+/* コメント */
 .comment-text{
   width: 400px;
   padding: 10px;
@@ -106,8 +109,12 @@
   display: block;
   margin: 10px auto;
   color: whitesmoke;
-  padding: 7px 100px;
+  padding: 7px 50px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
 }
+.comment-btn:hover {
+  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+}
+/* コメント */

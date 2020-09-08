@@ -15,11 +15,11 @@
       Share your images with people around the world
     </p>
   </div>
-
-  <h2 class="about-title">
-    <span class="test">Pixel Exhibition</span>について
-  </h2>
-
+　<div class="about-box">
+    <h2 class="about-title">
+      <span class="test">Pixel Exhibition</span>について
+    </h2>
+  </div>
   <div class="about">
     <p class="about-text">
       <span class="test">Pixel Exhibition</span>では自分のお気に入りの画像を投稿する事ができるアプリであり<br>
@@ -28,10 +28,12 @@
     </p>
   </div>
 
-  <h2 class="post-title">
-    画像投稿一覧
-  </h2>
-  
+  <div class="about-box">
+    <h2 class="post-title">
+      画像投稿一覧
+    </h2>
+  </div>
+
   <div class="posts-content">
     <% @posts.each do |post|%>
     <div class="post-content">
@@ -78,7 +80,19 @@
     </div>
 
     <div class="sab-content2">
-      <%=link_to 'ログイン',new_user_registration_path, class:"login-btn" %>
+      <%=link_to 'ログイン',new_user_session_path, class:"login-btn" %>
+    </div>
+
+    <h2 class="google-title">
+      Googleでもサインアップ・ログインできます
+    </h2>
+
+    <div class="google-box">
+      <%= link_to 'Googleで新規登録', user_google_oauth2_omniauth_authorize_path, method: :post, class:"google-index-btn"%>
+    </div>
+
+    <div class="google-box">
+      <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class:"google-index-btn"%>
     </div>
 
     <div class="privacy">
