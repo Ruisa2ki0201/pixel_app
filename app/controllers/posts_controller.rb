@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
   def index
-    @posts =Post.includes(:user,:likes)
+    @posts = Post.includes(:user, :likes)
   end
 
   def new
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post =Post.find(params[:id])
+    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to post_path
     else
@@ -57,8 +57,6 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 end
