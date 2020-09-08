@@ -3,10 +3,10 @@
     <%=link_to "Pixel Exhibition",root_path, class:"header-title"%>
   </h1>
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <form method="get" action="/posts/search" class="search_container">
-      <input type="keyword" size="25" placeholder="キーワード検索">
+    <%= form_with(url: search_posts_path, local: true, method: :get, class:"search_container") do |form| %>
+      <%= form.text_field :name, placeholder: "キーワード検索" %>
       <input type="submit" value="&#xf002">
-    </form>
+    <% end %>
   <nav class="pc-nav">
     <ul>
       <% if user_signed_in?%>

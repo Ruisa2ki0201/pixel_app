@@ -45,12 +45,12 @@ a {
   overflow: hidden;
   background-color: whitesmoke;
 }
-.search_container input[type="keyword"]{
+.search_container #name{
   border: none;  /* 周りの線を消す*/
   height: 2.2em;
   background-color: whitesmoke;
 }
-.search_container input[type="keyword"]:focus{
+.search_container #name:focus{
   outline: 0;
   color: black;
 }

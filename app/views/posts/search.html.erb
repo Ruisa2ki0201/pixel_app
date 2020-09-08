@@ -1,23 +1,18 @@
 <%= render 'shared/header' %>
 
-<div class="posts-content">
-  <% @posts.each do |post| %>
-  <div class="post-img-content">
-    <%= link_to post_path(post.id) do %>
-      <%= image_tag post.image, class:"post-img"%>
+<div class="search-contents">
+  <% @posts.each do |post|%>
+  <div class="search-content">
+    <%=link_to post_path(post.id) do %>
+      <%= image_tag post.image,class:"post-image" if post.image.attached?%>
     <% end %>
-    <div class="post-content">
-      <div class="post-name">
-        <%= post.name %>
-      </div>
 
-      <div class="post-like">
-        <%= post.likes.count %>
-      </div>
+    <div class="post-name">
+      <%= post.name %>
+        
+      いいね：<%= post.likes.count %>
 
-      <div class="post-comment">
-        <%= post.comments.count %>
-      </div>
+      コメント数：<%= post.comments.count %>
     </div>
   </div>
   <% end %>

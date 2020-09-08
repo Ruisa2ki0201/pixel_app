@@ -11,6 +11,11 @@ class User < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  with_options presence: true do
+    validates :nickname
+    validates :image
+  end
+
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
   end

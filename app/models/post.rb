@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   validates :name,:text, presence: true
 
   def self.search(search)
-    if search!= ""
+    if search != ""
       Post.where('name LIKE(?)', "%#{search}%")
     else
       Post.all #空の場合postの中身を全て取得
