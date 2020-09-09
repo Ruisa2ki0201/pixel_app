@@ -1,61 +1,51 @@
-<div class='account-page' id='account-page'>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2>Create Account</h2>
-      <h5>新規アカウントの作成</h5>
-      <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%><br>
-      <%= link_to '戻る', root_path %>
-    </div>
-    <div class='account-page__inner--right user-form'>
-      <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
-        <%= devise_error_messages!%>
-        <div class="field-label">
-          <%= f.label :image %><br/>
-          <%= f.file_field :image %>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :nickname %>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :nickname, autofocus: true%>
-          </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :email%>
-          </div>
-          <div class='field-input'>
-            <%= f.email_field :email%>
-          </div>
-        </div>
-        <%if @sns_id.present? %>
-          <%= hidden_field_tag :sns_auth, true %>
-        <% else %> 
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :password%>
-              <i>(英数字8文字以上)</i>
-            </div>
-            <div class='field-input'>
-              <%= f.password_field :password, autocomplete: "off"%>
-            </div>
-          </div>
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :password_confirmation%>
-            </div>
-            <div class='field-input'>
-              <%= f.password_field :password_confirmation, autocomplete: "off"%>
-            </div>
-          </div>
-        <% end %>
-        <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
-        </div>
-      </div>
-    <% end %>
+<div class="login-box">
+  <h2 class="login-title">
+    Pixel Exhibition
+  </h2>
+
+  <div class="login-text-box">
+    <p class="login-text">新規登録</p>
   </div>
 
-  
+  <div class="login-content">
+   <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
+    
+    <div class="label">
+      <%= f.label :image %>
+    </div>
+    <div class="file-upload-button">
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="label">
+      <%= f.label :nickname %>
+    </div>
+    <%= f.text_field :nickname, placeholder:"nickname", autofocus: true%>
+
+    <div class="label">
+      <%= f.label :email%>
+    </div>
+    <%= f.email_field :email, placeholder:"Email"%>
+
+    <%if @sns_id.present? %>
+      <%= hidden_field_tag :sns_auth, true %>
+    <% else %> 
+      <div class="label">
+        <%= f.label :password%>
+      </div>
+      <%= f.password_field :password, placeholder:"Password", autocomplete: "off"%>
+    
+      <div class="label">
+        <%= f.label :password_confirmation%>
+      </div>
+      <%= f.password_field :password_confirmation, placeholder:"Password_confirmation", autocomplete: "off"%>
+    <% end %>
+
+    <%= f.submit "新規登録", class: 'btn'%>
+
+    <div class="root-btn-login">
+      <%=link_to 'トップページに戻る', root_path, class:"root-login-btn"%>
+    </div>
+  <% end %>
+  </div>
 </div>
