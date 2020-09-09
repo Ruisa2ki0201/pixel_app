@@ -1,0 +1,23 @@
+.show-post-text{
+  font-family: serif;
+  font-size: 20px;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+.show-post-text:before, .show-post-text:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: whitesmoke;
+}
+.show-post-text:before {
+  left:0;
+}
+.show-post-text:after {
+  right: 0;
+}

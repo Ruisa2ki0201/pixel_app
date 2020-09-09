@@ -14,7 +14,10 @@
         <% else %>
           <%= button_to 'いいね', post_likes_path(@post), class:"show-likes-btn" %>
         <% end %>
+        
+        <%=link_to '編集', edit_post_path(@post.id), class:"edit-show-btn" %>
 
+        <%=link_to '削除', post_path(@post.id), class:"edit-show-btn" %>
       </div>
 
       <div class="show-name">
