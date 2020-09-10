@@ -1,32 +1,28 @@
-.new-main{
+.new-box{
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   animation-name: fadein;
-  animation-duration: 7s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
 }
-.new-main-content{
-  height: 600px;
-  width: 50%;
-  margin: 0 auto;
-}
 .new-title{
-  padding: 20px 0 10px 0;
-  font-size: 70px;
+  font-size: 50px;
   font-family: cursive;
   text-align: center;
   color: whitesmoke;
 }
-.new-text-content{
+.new-text-title{
   text-align: center;
+  padding: 20px;
 }
 .new-text{
   font-size: 20px;
-  font-family: cursive;
+  font-family: serif;
   color: whitesmoke;
   position: relative;
   display: inline-block;
   padding: 0 55px;
+  color: whitesmoke;
 }
 .new-text:before, .new-text:after {
   content: '';
@@ -44,56 +40,54 @@
   right: 0;
 }
 
-
-
-/* form */
-#post_image{
-  display: block;
-  margin: 30px auto 0;
-  color: whitesmoke;
-  font-family: serif;
+/* 画像投稿 */
+.new-content{
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
 }
 #post_name{
-  width: 400px;
-  padding: 15px 15px 10px 15px;
-  border: none;
+  width: 70%;
+  padding: 10px;
   outline: none;
-  border: 1px solid whitesmoke;
+  border: none;
   display: block;
-  margin: 30px auto 0;
+  margin: 0 auto;
 }
 #post_text{
   height: 100px;
-  width: 400px;
-  padding: 15px;
-  margin: 30px auto 0;
-  border: 1px solid whitesmoke;
+  width: 70%;
+  padding: 10px;
   outline: none;
+  border: none;
   display: block;
+  margin: 0 auto;
 }
 .post-btn{
   display: block;
-  margin: 30px auto;
+  margin: 50px auto 30px;
+  font-family: serif;
   color: whitesmoke;
   padding: 7px 100px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  background-image: linear-gradient(45deg, #FF9933 0%, #FF0066	);
 }
 .post-btn:hover {
-  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+  background-image: linear-gradient(45deg, #FF99FF 0%, #FF3366);
 }
 .new-post-btn{
   text-align: center;
 }
 .new-btn{
+  margin: 50px auto;
+  font-family: serif;
   color: whitesmoke;
   padding: 7px 30px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  background-image: linear-gradient(45deg,#FF9933 0%, #FF0066	);
 }
-.new-btn:hover {
-  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+.new-btn:hover{
+  background-image: linear-gradient(45deg, #FF99FF 0%, #FF3366);
 }
-/* form */
