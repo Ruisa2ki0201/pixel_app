@@ -2,7 +2,6 @@ window.addEventListener('load', function(){
   const Lists = document.querySelectorAll(".list")
   const Image = document.querySelector(".main-image")
   const Image2 = document.querySelector(".main-image2")
-  console.log(Image2)
 
   Lists.forEach(function(list){
     list.addEventListener('mouseover', function(){

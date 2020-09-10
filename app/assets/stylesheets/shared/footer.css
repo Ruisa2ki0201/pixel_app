@@ -1,34 +1,20 @@
 .footer-box{
+  height: 200px;
   width: 100%;
-  padding: 30px 30px 10px 30px;
-  border-top: 1px solid whitesmoke;
-  text-align: center;
-  background: rgba(255, 255, 255, 30%);
-  animation-name: fadein;
-  animation-duration: 7s;
-  animation-iteration-count: 1;
+  border-top: 1px dashed whitesmoke;
+  background: rgba(255, 255, 255, 20%);
 }
 .footer-title{
   font-size: 50px;
+  padding: 20px;
+  text-align: center;
   font-family: cursive;
-  position: relative;
-  display: inline-block;
-  padding: 0 55px;
   color: whitesmoke;
 }
-.footer-title:before, .footer-title:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  width: 45px;
-  height: 2px;
-  border-top: solid 1px whitesmoke;
-  border-bottom: solid 1px whitesmoke;
+.footer-privacy{
+  text-align: center;
 }
-.footer-title:before {
-  left:0;
-}
-.footer-title:after {
-  right: 0;
+.footer-pixel{
+  padding: 30px;
+  text-align: center;
 }

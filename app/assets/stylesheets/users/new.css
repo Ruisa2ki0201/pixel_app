@@ -52,10 +52,20 @@
 .file-upload-button{
   text-align: center;
 }
-#user_image{
+.login-image-btn{
+  font-family: serif;
+  font-size: 15px;
   color: whitesmoke;
-  padding: 10px;
+  padding: 7px 30px;
+  margin: 50px auto;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(45deg,#FF9933 0%, #FF0066	);
 }
+.login-image-btn:hover {
+  background-image: linear-gradient(45deg, #FF99FF 0%, #FF3366);
+}
+
 #user_nickname{
   width: 70%;
   padding: 10px;
@@ -96,10 +106,10 @@
   padding: 7px 100px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  background-image: linear-gradient(45deg, #FF9933 0%, #FF0066	);
 }
 .btn:hover {
-  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+  background-image: linear-gradient(45deg, #FF99FF 0%, #FF3366);
 }
 .root-btn-login{
   text-align: center;
@@ -111,8 +121,9 @@
   padding: 7px 30px;
   border-radius: 25px;
   border: none;
-  background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
+  background-image: linear-gradient(45deg,#FF9933 0%, #FF0066	);
 }
 .root-login-btn:hover {
-  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+  background-image: linear-gradient(45deg, #FF99FF 0%, #FF3366);
 }
+
