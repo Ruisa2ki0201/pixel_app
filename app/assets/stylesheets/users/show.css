@@ -38,7 +38,7 @@
   background-image: linear-gradient(45deg,#FF6633 0%, #FF0066	);
 }
 .user-edit-btn:hover {
-  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+  background-image: linear-gradient(45deg, #FFCCFF 0%, #FF3366);
 }
 .posts-count{
   justify-content: center;

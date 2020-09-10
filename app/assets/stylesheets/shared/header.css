@@ -26,7 +26,7 @@ a {
   transition: .4s; /*時間を指定*/
 }
 .upload:hover {  /*カーソルを合わせた時に発動*/
-  background-image: linear-gradient(45deg, #FF66CC 0%, #FF3366);
+  background-image: linear-gradient(45deg, #FFAAFF 0%, #FF3366);
 }
 .list {
   color: black;
@@ -71,13 +71,13 @@ a {
 nav {
   margin: 0 0 0 auto;
 }
-ul {
+.header-ul {
   list-style: none;
   margin: 0;
   display: flex;
   align-items: center;
 }
-li {
+.header-list {
   margin: 0 0 0 15px;
   font-size: 14px;
 }
