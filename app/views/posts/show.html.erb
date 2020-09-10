@@ -17,7 +17,7 @@
         
         <%=link_to '編集', edit_post_path(@post.id), class:"edit-show-btn" %>
 
-        <%=link_to '削除', post_path(@post.id), class:"edit-show-btn" %>
+        <%=link_to '削除', post_path(@post.id), class:"edit-show-btn",method: :delete%>
       </div>
 
       <div class="show-name">
@@ -50,8 +50,8 @@
         <div class="comment" id="comments">
           <% @comments.reverse_each do |comment| %>
           <p class="text-box">
-            <%= comment.user.nickname%>:
-            <%= comment.content %>
+            <%= comment.user.nickname%>：
+            <%= comment.content %>：
             &nbsp;
             <% if user_signed_in? && current_user.id == comment.user_id %> 
               <%= link_to '削除', comment_path(comment.id), method: :delete %>
