@@ -1,12 +1,12 @@
 .show-box{
   width: 100%;
   animation-name: fadein;
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
 }
 .show-contents{
   height: 500px;
-  width: 80%;
+  width: 90%;
   display: flex;
   margin: 20px auto;
   background: rgba(255, 255, 255, 70%);
@@ -17,6 +17,9 @@
   height: 100%;
   width: 50%;
   padding: 20px;
+}
+.show-image-content{
+  text-align: center;
 }
 .show-image{
   height: 300px;
