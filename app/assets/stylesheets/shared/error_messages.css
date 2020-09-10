@@ -1,0 +1,11 @@
+.alert-alert-warning{
+  color: whitesmoke;
+  font-family: serif;
+}
+.error-text{
+  text-align: center;
+  padding-bottom: 10px;
+}
+.error-list{
+  padding: 5px;
+}
