@@ -12,7 +12,9 @@
   </div>
 
   <div class="new-content">
-  <%= form_with model: @post,　local: true do |f|%>
+  <%= form_with model: @post,local: true do |f|%>
+
+    <%= render 'shared/error_messages', model: f.object %>
 
     <div class="label">
       <%= f.label :image, "画像を選択する", class:"login-image-btn"%>

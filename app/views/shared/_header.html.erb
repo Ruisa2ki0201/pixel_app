@@ -8,17 +8,17 @@
       <input type="submit" value="&#xf002">
     <% end %>
   <nav class="pc-nav">
-    <ul>
+    <ul class="header-ul">
       <% if user_signed_in?%>
-      <li><%=link_to "TOP", root_path, class:"list"%></li>
-      <li><%=link_to "アップロード", new_post_path, class:"upload" %></li>
-      <li><%=image_tag current_user.image.url, class:"icon_image" %></li>
-      <li><%=link_to current_user.nickname, user_path(current_user.id), class:"list"%></li>
-      <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"list" %></li>
+      <li class="header-list"><%=link_to "TOP", root_path, class:"list"%></li>
+      <li class="header-list"><%=link_to "アップロード", new_post_path, class:"upload" %></li>
+      <li class="header-list"><%=image_tag current_user.image.url, class:"icon_image" %></li>
+      <li class="header-list"><%=link_to current_user.nickname, user_path(current_user.id), class:"list"%></li>
+      <li class="header-list"><%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"list" %></li>
       <% else %>
-      <li><%=link_to "アップロード", new_user_registration_path, class:"upload" %></li>
-      <li><%=link_to "ログイン", new_user_session_path, class:"list" %></li>
-      <li><%=link_to "新規登録", new_user_registration_path, class:"list" %></li>
+      <li class="header-list"><%=link_to "アップロード", new_user_registration_path, class:"upload" %></li>
+      <li class="header-list"><%=link_to "ログイン", new_user_session_path, class:"list" %></li>
+      <li class="header-list"><%=link_to "新規登録", new_user_registration_path, class:"list" %></li>
       <% end %>
     </ul>
   </nav>
