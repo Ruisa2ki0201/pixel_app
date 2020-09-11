@@ -8,7 +8,7 @@
   </div>
 
   <div class="login-content">
-   <%= form_with model: current_user, local: true do |f|%>
+   <%= form_with model: current_user,url:user_path,local: true do |f|%>
 
     <%= render 'shared/error_messages', model: f.object %>
 
@@ -29,10 +29,20 @@
     </div>
     <%= f.email_field :email, placeholder:"Email", autofocus: true%>
 
-    <%= f.submit "更新する", class: 'btn'%>
+    <div class="label">
+      <%= f.label :password%>
+    </div>
+    <%= f.password_field :password, placeholder:"Password", autofocus: true %>
+
+    <div class="label">
+      <%= f.label :password_confirmation %>
+    </div>
+    <%= f.password_field :password_confirmation, placeholder:"Password_confirmation", autofocus: true %> 
+
+    <%= f.submit "更新する", class: 'btn' %>
 
     <div class="root-btn-login">
-      <%=link_to 'トップページに戻る', root_path, class:"root-login-btn"%>
+      <%=link_to 'マイページに戻る', root_path, class:"root-login-btn"%>
     </div>
   <% end %>
   </div>
