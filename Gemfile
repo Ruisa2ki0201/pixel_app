@@ -60,8 +60,6 @@ gem "omniauth-rails_csrf_protection"
 
 gem 'pry-rails'
 
-gem 'carrierwave'
-
 gem 'high_voltage'
 
 gem 'font-awesome-rails'

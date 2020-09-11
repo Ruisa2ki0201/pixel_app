@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :sns_creadentials
 
-  mount_uploader :image, ImageUploader
+  has_one_attached :image
 
   with_options presence: true do
     validates :nickname

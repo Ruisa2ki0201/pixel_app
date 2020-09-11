@@ -12,7 +12,7 @@
       <% if user_signed_in?%>
       <li class="header-list"><%=link_to "TOP", root_path, class:"list"%></li>
       <li class="header-list"><%=link_to "アップロード", new_post_path, class:"upload" %></li>
-      <li class="header-list"><%=image_tag current_user.image.url, class:"icon_image" %></li>
+      <li class="header-list"><%=image_tag current_user.image,class:"icon_image" if current_user.image.attached?%></li>
       <li class="header-list"><%=link_to current_user.nickname, user_path(current_user.id), class:"list"%></li>
       <li class="header-list"><%=link_to "ログアウト", destroy_user_session_path, method: :delete, class:"list" %></li>
       <% else %>

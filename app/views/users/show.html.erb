@@ -11,7 +11,7 @@
   </p>
    
 
-  <%=image_tag current_user.image.url, class:"user-show-icon" %>
+  <%=image_tag current_user.image, class:"user-show-icon" if @current_user.image.attached? %>
 
   <div class="posts-count">
     投稿：<%= @posts.count %>
@@ -21,9 +21,7 @@
     コメント：<%= current_user.comments.count%>
   </div>
 
-  <% if user_signed_in? && current_user.id %>
-    <%=link_to 'プロフィールを編集する', edit_user_path(current_user.id), class:"user-edit-btn" %>
-  <% end %>
+  <%=link_to 'プロフィールを編集する', edit_user_path(current_user.id), class:"user-edit-btn" %>
 
   <%# <%=link_to 'ダイレクトメッセージ', "#", class:"user-dm-btn" %> 
 
